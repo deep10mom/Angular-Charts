@@ -1,0 +1,6 @@
+<div class="container">
+  <h3 style="text-align: center">City: {{ location }}</h3>
+  <div *ngIf="chart" class="bg-dark">
+    <canvas id="canvas">{{ chart }}</canvas>
+  </div>
+</div>

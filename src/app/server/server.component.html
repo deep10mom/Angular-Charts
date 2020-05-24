@@ -1,0 +1,13 @@
+<h3>our own component</h3>
+<input type="text" (input)="write($event)" />
+<hr />
+<app-servers></app-servers>
+<!--<p>{{ output }}</p>-->
+<button (click)="oncreateserver()">click me</button>
+<p *ngIf="status; else noserver">{{ serverst }}</p>
+<ng-template #noserver>
+  <p>
+    no server was created.
+  </p>
+</ng-template>
+<h3>{{ serverid }} is {{ serverstatus }}</h3>

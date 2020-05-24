@@ -1,0 +1,12 @@
+<div *ngIf="chartReady" class="container">
+  <canvas
+    baseChart
+    [chartType]="'pie'"
+    [datasets]="pieChartData"
+    [labels]="pieChartLabels"
+    [options]="pieChartOptions"
+    [legend]="true"
+    [colors]="pieChartColor"
+  >
+  </canvas>
+</div>
