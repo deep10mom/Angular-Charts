@@ -1,4 +1,4 @@
-<div *ngIf="chartReady" class="container">
+<!-- <div *ngIf="chartReady" class="container">
   <canvas
     baseChart
     [chartType]="'pie'"
@@ -9,4 +9,30 @@
     [colors]="pieChartColor"
   >
   </canvas>
+</div> -->
+<div class="container">
+  
+  <div *ngIf="chartReady" class="bg-dark" >
+        
+        <div class="row">
+            <div class="col-sm-8" id="pie">
+                    <!-- <h3 style="text-align: center">City: {{ location }}</h3> -->
+                    <canvas
+                    baseChart
+                    [chartType]="'pie'"
+                    [datasets]="pieChartData"
+                    [labels]="pieChartLabels"
+                    [options]="pieChartOptions"
+                    [legend]="true"
+                    [colors]="pieChartColor"
+                  >
+                  </canvas>
+    </div>
+    <div class="col-sm-4">
+        <button class="btn btn-primary" (click)="download()">Export to PDF</button>
+    </div>
+  </div>
+
 </div>
+</div>
+
